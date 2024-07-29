@@ -21,6 +21,7 @@ body#social-links-profile {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   background-color: var(--color-grey-900);
+  padding: 0;
 }
 
 main#main-content {
@@ -31,12 +32,20 @@ main#main-content {
   width: 100%;
   max-width: 30.4rem;
   padding: 4rem;
-  margin: 0 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--color-grey-800);
+
+  @media (max-width: 1000px) {
+    max-width: 45.6rem;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 27.9rem;
+    padding: 2.4rem;
+  }
 }
 
 h1.invisible {
@@ -101,6 +110,21 @@ section#links {
   cursor: pointer;
   background-color: var(--color-green);
   color: var(--color-grey-700);
+}
+
+.link:focus {
+  background-color: var(--color-green);
+  color: var(--color-grey-700)
+}
+
+.link:active {
+  background-color: var(--color-grey-700);
+  color: var(--color-white);
+}
+
+a,
+button {
+  width: 100%;
 }
 
 footer#attribution {
